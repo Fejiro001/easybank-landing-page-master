@@ -1,0 +1,13 @@
+@use '../abstracts/index' as *;
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 7rem;
+    background-color: $light-grayish-blue;
+
+
+    &__cards {
+        display: flex;
+    }
+}

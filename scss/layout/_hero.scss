@@ -1,0 +1,70 @@
+@use '../abstracts/index' as *;
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: $very-light-gray;
+
+    @media (min-width: 820px) {
+        flex-direction: row;
+    }
+    
+    .hero__images {
+        position: relative;
+
+        .bg-image {
+            position: relative;
+            top: 0;
+            z-index: -1;
+        }
+        .mockups {
+            position: absolute;
+            top: -30%;
+            z-index: 0;
+
+            @media (min-width: 820px) {
+                top: -20%;
+                right: -15%;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        padding: 7rem;
+        // max-width: 40rem;
+
+        @media (min-width: 820px) {
+            align-items: start;
+            text-align: start;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 3rem;
+            color: $dark-blue;
+        }
+
+        p {
+            color: $grayish-blue;
+            font-size: 1rem;
+        }
+
+        button {
+            @include button;
+        }
+    }
+}
+

@@ -1,0 +1,12 @@
+@use 'colors' as *;
+@use 'variables' as *;
+
+@mixin button {
+    background: $gradient;
+    border: none;
+    border-radius: 2rem;
+    padding: .5rem 2rem;
+    font-size: $paragraph-size;
+    color: $white;
+    cursor: pointer;
+}
