@@ -85,7 +85,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1.5rem;
   background-color: hsl(0, 0%, 100%);
   position: relative;
@@ -95,9 +95,6 @@ header {
   header {
     justify-content: space-around;
   }
-}
-header img {
-  max-width: 100%;
 }
 header .menu {
   cursor: pointer;
@@ -118,7 +115,7 @@ header ul {
 }
 header ul li {
   list-style: none;
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 1vw, 1.5rem);
 }
 header ul li a {
   color: hsl(233, 8%, 62%);
@@ -134,16 +131,19 @@ header button {
     border: none;
     border-radius: 2rem;
     padding: 0.5rem 2rem;
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 1vw, 1.5rem);
     color: hsl(0, 0%, 100%);
     cursor: pointer;
   }
 }
 
-main {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.container main {
+  max-width: 150rem;
   overflow: hidden;
 }
 
@@ -181,9 +181,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   text-align: center;
-  padding: 7rem;
+  padding: 5rem 2rem;
 }
 @media (min-width: 820px) {
   .hero__text {
@@ -193,19 +193,21 @@ main {
 }
 .hero__text h1 {
   font-weight: 400;
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 1vw, 3rem);
   color: hsl(233, 26%, 24%);
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .hero__text p {
   color: hsl(233, 8%, 62%);
-  font-size: 1rem;
+  font-size: clamp(1rem, 1vw, 1.5rem);
 }
 .hero__text button {
   background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   border: none;
   border-radius: 2rem;
   padding: 0.5rem 2rem;
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 1vw, 1.5rem);
   color: hsl(0, 0%, 100%);
   cursor: pointer;
 }
@@ -213,9 +215,63 @@ main {
 .intro {
   display: flex;
   flex-direction: column;
-  padding: 5rem 7rem;
+  gap: 3rem;
+  padding: 5rem 2rem;
   background-color: hsl(220, 16%, 96%);
+  text-align: center;
+}
+.intro__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.intro__heading h2 {
+  font-size: clamp(2rem, 1vw, 2.5rem);
+  font-weight: 400;
+  color: hsl(233, 26%, 24%);
+}
+.intro__heading p {
+  color: hsl(233, 8%, 62%);
+  font-size: clamp(1rem, 1vw, 1.5rem);
 }
 .intro__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+}
+.intro__cards article {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.intro__cards h3 {
+  font-size: clamp(1.5rem, 1vw, 2rem);
+  font-weight: 400;
+  color: hsl(233, 26%, 24%);
+}
+.intro__cards p {
+  color: hsl(233, 8%, 62%);
+  font-size: clamp(1rem, 1vw, 1.5rem);
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5rem 2rem;
+  background-color: hsl(0, 0%, 98%);
+  text-align: center;
+}
+.news h2 {
+  font-size: clamp(2rem, 1vw, 2.5rem);
+  font-weight: 400;
+  color: hsl(233, 26%, 24%);
+}
+.news__articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
 }

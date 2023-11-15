@@ -1,10 +1,15 @@
 @use '../abstracts/index' as *;
 
-main {
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    
+    main {
+        max-width: 150rem;
+        overflow: hidden;
+    }
 }
 
 .hero {
@@ -41,10 +46,9 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: $gap;
         text-align: center;
-        padding: 7rem;
-        // max-width: 40rem;
+        padding: $section-pad;
 
         @media (min-width: 820px) {
             align-items: start;
@@ -53,13 +57,14 @@ main {
 
         h1 {
             font-weight: 400;
-            font-size: 3rem;
+            font-size: clamp(2.5rem, 1vw, 3rem);
             color: $dark-blue;
+            width: fit-content;
         }
 
         p {
             color: $grayish-blue;
-            font-size: 1rem;
+            font-size: $paragraph-size;
         }
 
         button {

@@ -1,0 +1,13 @@
+@use '../abstracts/index' as *;
+
+.news {
+    @include section-style($very-light-gray);
+
+    h2 {
+        @include section-heading;
+    }
+
+    &__articles {
+        @include grid-items;
+    }
+}

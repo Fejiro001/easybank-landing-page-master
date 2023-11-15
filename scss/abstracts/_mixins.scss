@@ -10,3 +10,29 @@
     color: $white;
     cursor: pointer;
 }
+
+@mixin paragraphs {
+    color: $grayish-blue;
+    font-size: $paragraph-size;
+}
+
+@mixin section-style($background-color) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: $section-pad;
+    background-color: $background-color;
+    text-align: center;
+}
+
+@mixin section-heading {
+    font-size: clamp(2rem, 1vw, 2.5rem);
+    font-weight: 400;
+    color: $dark-blue;
+}
+
+@mixin grid-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+}

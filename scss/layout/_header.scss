@@ -4,7 +4,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: $gap;
     padding: 1.5rem;
     background-color: $white;
     position: relative;
@@ -12,10 +12,6 @@ header {
 
     @media (min-width: 820px) {
         justify-content: space-around;
-    }
-
-    img {
-        max-width: 100%;
     }
 
     .menu {
@@ -31,7 +27,7 @@ header {
 
         @media (min-width: 820px) {
             display: flex;
-            gap: 1.5rem;
+            gap: $gap;
         }
 
         li {

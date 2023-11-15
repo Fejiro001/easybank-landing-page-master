@@ -2,4 +2,6 @@
 
 $font-family: 'Public Sans', sans-serif;
 
-$paragraph-size: 1.125rem;
+$paragraph-size: clamp(1rem, 1vw, 1.5rem);
+$gap: 1.5rem;
+$section-pad: 5rem 2rem;
