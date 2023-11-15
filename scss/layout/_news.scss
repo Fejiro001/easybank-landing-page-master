@@ -9,5 +9,33 @@
 
     &__articles {
         @include grid-items;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: $gap;
+
+            .author {
+                color: $grayish-blue;
+                font-size: .7rem;
+            }
+
+            h4 {
+                font-size: clamp(1rem, 1vw, 1.5rem);
+                font-weight: 400;
+                color: $dark-blue;
+            }
+
+            p {
+                color: $grayish-blue;
+                font-size: clamp(.8rem, 1vw, 1rem);
+            }
+        }
+
+        img {
+            border-radius: .5rem;
+        }
     }
 }

@@ -2,31 +2,36 @@
 
 .intro {
     @include section-style($light-grayish-blue);
-
+    
     &__heading{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: $gap;
 
+        @media (min-width: 820px) {
+            align-items: flex-start;
+        }
+        
         h2 {
             @include section-heading;
         }
-
+        
         p {
             @include paragraphs;
         }
     }
-
+    
     &__cards {
         @include grid-items;
-
+        
         article {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: $gap;
+            text-align: center;
         }
 
         h3 {
