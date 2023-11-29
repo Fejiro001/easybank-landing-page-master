@@ -21,18 +21,18 @@
         flex-direction: row;
     }
     
-    .hero__images {
+    &__images {
         position: relative;
 
         .bg-image {
             position: relative;
             top: 0;
-            z-index: -1;
+            z-index: 0;
         }
         .mockups {
             position: absolute;
             top: -30%;
-            z-index: 0;
+            z-index: 1;
 
             @media (min-width: 820px) {
                 top: -20%;
@@ -49,6 +49,10 @@
         gap: $gap;
         text-align: center;
         padding: $section-pad;
+
+        @media (max-width: 500px) {
+            padding: 3rem 2rem;
+        }
 
         @media (min-width: 820px) {
             align-items: start;
