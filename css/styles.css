@@ -41,7 +41,7 @@
     4. Improve text rendering
   */
 body {
-  line-height: 1.5;
+  line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   font-family: "Public Sans", sans-serif;
 }
@@ -130,7 +130,7 @@ header button {
     background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
     border: none;
     border-radius: 2rem;
-    padding: 0.5rem 2rem;
+    padding: 0.8rem 2rem;
     font-size: clamp(1rem, 1vw, 1.5rem);
     color: hsl(0, 0%, 100%);
     cursor: pointer;
@@ -140,7 +140,11 @@ header button {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+@media (min-width: 2300px) {
+  .container {
+    align-items: center;
+  }
 }
 .container main {
   max-width: 150rem;
@@ -161,14 +165,16 @@ header button {
   position: relative;
 }
 .hero__images .bg-image {
+  width: 100%;
   position: relative;
-  top: 0;
+  top: -2rem;
   z-index: 0;
 }
 .hero__images .mockups {
   position: absolute;
-  top: -30%;
+  top: -32%;
   z-index: 1;
+  width: 100%;
 }
 @media (min-width: 820px) {
   .hero__images .mockups {
@@ -183,7 +189,7 @@ header button {
   justify-content: center;
   gap: 1rem;
   text-align: center;
-  padding: 7rem 2rem;
+  padding: 6rem;
 }
 @media (max-width: 500px) {
   .hero__text {
@@ -211,7 +217,7 @@ header button {
   background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   border: none;
   border-radius: 2rem;
-  padding: 0.5rem 2rem;
+  padding: 0.8rem 2rem;
   font-size: clamp(1rem, 1vw, 1.5rem);
   color: hsl(0, 0%, 100%);
   cursor: pointer;
@@ -221,18 +227,30 @@ header button {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 7rem 2rem;
+  padding: 6rem;
   background-color: hsl(220, 16%, 96%);
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .intro {
+    padding-inline: 2rem;
+  }
+}
+@media (min-width: 820px) {
+  .intro {
+    align-items: normal;
+  }
 }
 .intro__heading {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   gap: 1rem;
 }
 @media (min-width: 820px) {
   .intro__heading {
     align-items: flex-start;
+    text-align: start;
   }
 }
 .intro__heading h2 {
@@ -271,13 +289,30 @@ header button {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 7rem 2rem;
+  padding: 6rem;
   background-color: hsl(0, 0%, 98%);
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .news {
+    padding-inline: 2rem;
+  }
+}
+@media (min-width: 820px) {
+  .news {
+    align-items: normal;
+  }
 }
 .news h2 {
   font-size: clamp(2rem, 1vw, 2.5rem);
   font-weight: 400;
   color: hsl(233, 26%, 24%);
+  text-align: center;
+}
+@media (min-width: 820px) {
+  .news h2 {
+    text-align: start;
+  }
 }
 .news__articles {
   display: grid;
@@ -287,25 +322,36 @@ header button {
 .news__articles article {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.news__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 12rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.news__text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
-.news__articles article .author {
+.news__text .author {
   color: hsl(233, 8%, 62%);
   font-size: 0.7rem;
 }
-.news__articles article h4 {
-  font-size: clamp(1rem, 1vw, 1.5rem);
+.news__text h4 {
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
   font-weight: 400;
   color: hsl(233, 26%, 24%);
 }
-.news__articles article p {
+.news__text p {
   color: hsl(233, 8%, 62%);
   font-size: clamp(0.8rem, 1vw, 1rem);
-}
-.news__articles img {
-  border-radius: 0.5rem;
 }
 
 footer {
