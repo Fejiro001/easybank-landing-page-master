@@ -1,6 +1,56 @@
 @use '../abstracts/index' as *;
 
 footer {
+    @include section-style($dark-blue);
     display: flex;
-    // background-color: $dark-blue;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+
+        .logo__text {
+            fill: $white;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+
+            li {}
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            color: $white;
+            text-align: center;
+        }
+    }
+}
+
+.right {}
+
+.attribution {
+    background-color: $dark-blue;
+    text-align: center;
+    color: $white;
+
+    a {
+        color: $lime-green;
+        text-decoration: none;
+    }
 }

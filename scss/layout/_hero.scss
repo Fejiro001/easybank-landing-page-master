@@ -52,7 +52,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: $gap;
+        gap: 1rem;
         text-align: center;
         padding: $section-pad;
 
@@ -79,6 +79,7 @@
 
         button {
             @include button;
+            margin-top: 1rem;
         }
     }
 }

@@ -81,11 +81,19 @@ h6 {
   overflow-wrap: break-word;
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
   padding: 1.5rem;
   background-color: hsl(0, 0%, 100%);
   position: relative;
@@ -110,11 +118,10 @@ header ul {
 @media (min-width: 820px) {
   header ul {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 header ul li {
-  list-style: none;
   font-size: clamp(1rem, 1vw, 1.5rem);
 }
 header ul li a {
@@ -221,6 +228,7 @@ header button {
   font-size: clamp(1rem, 1vw, 1.5rem);
   color: hsl(0, 0%, 100%);
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .intro {
@@ -356,4 +364,54 @@ header button {
 
 footer {
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 6rem;
+  background-color: hsl(233, 26%, 24%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 600px) {
+  footer {
+    padding-inline: 2rem;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.left__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.left__socials .logo__text {
+  fill: hsl(0, 0%, 100%);
+}
+.left__socials ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.left__links {
+  display: flex;
+  flex-direction: column;
+}
+.left__links li {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+.attribution {
+  background-color: hsl(233, 26%, 24%);
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.attribution a {
+  color: hsl(136, 65%, 51%);
+  text-decoration: none;
 }
