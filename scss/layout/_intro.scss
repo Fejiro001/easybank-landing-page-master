@@ -7,36 +7,36 @@
     @media (min-width: 820px) {
         align-items: normal;
     }
-    
-    &__heading{
+
+    &__heading {
         display: flex;
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
+        gap: $small-gap;
 
         @media (min-width: 820px) {
             align-items: flex-start;
             text-align: start;
         }
-        
+
         h2 {
             @include section-heading;
         }
-        
+
         p {
             @include paragraphs;
         }
     }
-    
+
     &__cards {
         @include grid-items;
-        
+
         article {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 1rem;
+            gap: $small-gap;
             text-align: center;
         }
 

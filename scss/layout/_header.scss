@@ -4,7 +4,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: $gap;
+    gap: $big-gap;
     padding: 1.5rem;
     background-color: $white;
     position: relative;
@@ -27,12 +27,12 @@ header {
 
         @media (min-width: 820px) {
             display: flex;
-            gap: $gap;
+            gap: $big-gap;
         }
 
         li {
             font-size: $paragraph-size;
-            
+
             a {
                 color: $grayish-blue;
                 text-decoration: none;
