@@ -94,14 +94,15 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 1.5rem;
+  padding: 1.3rem;
   background-color: hsl(0, 0%, 100%);
   position: relative;
   z-index: 1;
 }
 @media (min-width: 820px) {
   header {
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-inline: 10rem;
   }
 }
 header .menu {
@@ -179,7 +180,7 @@ header button {
 }
 .hero__images .mockups {
   position: absolute;
-  top: -32%;
+  top: -38%;
   z-index: 1;
   width: 100%;
 }
@@ -196,15 +197,11 @@ header button {
   justify-content: center;
   gap: 1rem;
   text-align: center;
-  padding: 6rem;
-}
-@media (max-width: 500px) {
-  .hero__text {
-    padding: 3rem 2rem;
-  }
+  padding: 3rem 1.3rem;
 }
 @media (min-width: 820px) {
   .hero__text {
+    padding: 10rem;
     align-items: start;
     text-align: start;
   }
@@ -235,7 +232,7 @@ header button {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 6rem;
+  padding: 10rem;
   background-color: hsl(220, 16%, 96%);
   align-items: center;
 }
@@ -253,7 +250,7 @@ header button {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 @media (min-width: 820px) {
   .intro__heading {
@@ -297,7 +294,7 @@ header button {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 6rem;
+  padding: 10rem;
   background-color: hsl(0, 0%, 98%);
   align-items: center;
 }
@@ -366,7 +363,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 6rem;
+  padding: 10rem;
   background-color: hsl(233, 26%, 24%);
   display: flex;
   flex-direction: column;

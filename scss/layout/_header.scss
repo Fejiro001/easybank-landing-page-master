@@ -5,13 +5,14 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: $big-gap;
-    padding: 1.5rem;
+    padding: $mobile-pad;
     background-color: $white;
     position: relative;
     z-index: 1;
 
     @media (min-width: 820px) {
-        justify-content: space-around;
+        justify-content: space-between;
+        padding-inline: 10rem;
     }
 
     .menu {
