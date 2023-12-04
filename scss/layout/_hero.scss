@@ -8,7 +8,7 @@
     @media (min-width: 2300px) {
         align-items: center;
     }
-    
+
     main {
         max-width: 150rem;
         overflow: hidden;
@@ -20,10 +20,10 @@
     flex-direction: column-reverse;
     background-color: $very-light-gray;
 
-    @media (min-width: 820px) {
+    @media (min-width: 900px) {
         flex-direction: row;
     }
-    
+
     &__images {
         position: relative;
 
@@ -31,15 +31,14 @@
             width: 100%;
             position: relative;
             top: -2rem;
-            z-index: 0;
         }
+
         .mockups {
             position: absolute;
             top: -38%;
-            z-index: 1;
             width: 100%;
 
-            @media (min-width: 820px) {
+            @media (min-width: 900px) {
                 top: -20%;
                 right: -15%;
             }
@@ -53,9 +52,9 @@
         justify-content: center;
         gap: $small-gap;
         text-align: center;
-        padding: 3rem $mobile-pad;
-        
-        @media (min-width: 820px) {
+        padding: 3rem $mobile-pad 5rem $mobile-pad;
+
+        @media (min-width: 900px) {
             padding: $section-pad;
             align-items: start;
             text-align: start;
@@ -80,4 +79,3 @@
         }
     }
 }
-

@@ -4,7 +4,7 @@
     @include section-style($very-light-gray);
     align-items: center;
 
-    @media (min-width: 820px) {
+    @media (min-width: 900px) {
         align-items: normal;
     }
 
@@ -12,7 +12,7 @@
         @include section-heading;
         text-align: center;
 
-        @media (min-width: 820px) {
+        @media (min-width: 900px) {
             text-align: start;
         }
     }

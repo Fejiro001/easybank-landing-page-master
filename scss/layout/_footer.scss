@@ -8,7 +8,7 @@ footer {
     gap: $big-gap;
     padding-block: 3rem;
 
-    @media (min-width: 820px) {
+    @media (min-width: 900px) {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -19,7 +19,7 @@ footer {
     flex-direction: column;
     gap: $big-gap;
 
-    @media (min-width: 820px) {
+    @media (min-width: 900px) {
         flex-direction: row;
         justify-content: space-between;
         gap: 5rem;
@@ -46,8 +46,8 @@ footer {
         display: flex;
         flex-direction: column;
         gap: $small-gap;
-        
-        @media (min-width: 820px) {
+
+        @media (min-width: 900px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             column-count: 2;
@@ -65,7 +65,7 @@ footer {
             color: $white;
             text-align: center;
 
-            @media (min-width: 820px) {
+            @media (min-width: 900px) {
                 text-align: start;
             }
         }
@@ -81,7 +81,7 @@ footer {
     flex-direction: column;
     gap: $big-gap;
 
-    @media (min-width: 820px) {
+    @media (min-width: 900px) {
         text-align: end;
         align-items: flex-end;
     }

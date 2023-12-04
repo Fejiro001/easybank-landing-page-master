@@ -9,31 +9,44 @@ header {
     background-color: $white;
     position: relative;
     z-index: 1;
+    width: 100%;
 
-    @media (min-width: 820px) {
+    @media (min-width: 900px) {
         justify-content: space-between;
-        padding-inline: 10rem;
+        padding-inline: 5rem;
     }
 
-    .menu {
+    .website-logo {
+        flex-shrink: 0;
+    }
+
+    .hamburger {
         cursor: pointer;
 
-        @media (min-width: 820px) {
+        @media (min-width: 900px) {
             display: none;
         }
     }
 
-    ul {
+    .menu {
+        // hide menu by default for smaller screens
         display: none;
-
-        @media (min-width: 820px) {
+        height: 0;
+        overflow: hidden;
+        
+        @media (min-width: 900px) {
             display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
             gap: $big-gap;
+            //  make menu visible on bigger screens
+            height: auto;
         }
-
+        
         li {
             font-size: $paragraph-size;
-
+            
             a {
                 color: $grayish-blue;
                 text-decoration: none;
@@ -41,10 +54,35 @@ header {
         }
     }
 
+    // open popup menu on clicking the hamburger icon
+    .open-menu {
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        height: fit-content;
+        margin: 6rem 2rem;
+        padding: 2rem 1rem;
+        border-radius: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -10%;
+        left: 0;
+        right: 0;
+
+        @media (min-width: 900px) {
+            flex-direction: row;
+            height: auto;
+            position: static;
+            margin: 0;
+        }
+    }
+    
     button {
         display: none;
 
-        @media (min-width: 820px) {
+        @media (min-width: 900px) {
             display: block;
             @include button;
         }

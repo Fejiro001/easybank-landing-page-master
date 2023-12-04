@@ -4,7 +4,7 @@
     @include section-style($light-grayish-blue);
     align-items: center;
 
-    @media (min-width: 820px) {
+    @media (min-width: 900px) {
         align-items: normal;
     }
 
@@ -14,7 +14,7 @@
         text-align: center;
         gap: 2rem;
 
-        @media (min-width: 820px) {
+        @media (min-width: 900px) {
             align-items: flex-start;
             text-align: start;
         }
