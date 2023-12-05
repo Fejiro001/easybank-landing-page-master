@@ -52,6 +52,11 @@
             font-size: clamp(1rem, 1.2vw, 1.5rem);
             font-weight: 400;
             color: $dark-blue;
+
+            &:hover {
+                color: $lime-green;
+                cursor: pointer;
+            }
         }
 
         p {

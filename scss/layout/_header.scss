@@ -27,64 +27,76 @@ header {
             display: none;
         }
     }
+}
 
-    .menu {
-        // hide menu by default for smaller screens
-        display: none;
-        height: 0;
-        overflow: hidden;
-        
-        @media (min-width: 900px) {
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            justify-content: center;
-            gap: $big-gap;
-            //  make menu visible on bigger screens
-            height: auto;
-        }
-        
-        li {
-            font-size: $paragraph-size;
-            
-            a {
-                color: $grayish-blue;
-                text-decoration: none;
+.menu {
+    // hide menu by default for smaller screens
+    display: none;
+    height: 0;
+    overflow: hidden;
+
+    @media (min-width: 900px) {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        gap: $big-gap;
+        //  make height of nav-links shrink to content
+        height: auto;
+    }
+
+    li {
+        font-size: $paragraph-size;
+
+        a {
+            color: $grayish-blue;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $dark-blue;
             }
         }
     }
+}
 
-    // open popup menu on clicking the hamburger icon
-    .open-menu {
-        background-color: $white;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        height: fit-content;
-        margin: 6rem 2rem;
-        padding: 2rem 1rem;
-        border-radius: 0.5rem;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: -10%;
-        left: 0;
-        right: 0;
+// open popup menu on clicking the hamburger icon
+.open-menu {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $big-gap;
+    height: fit-content;
+    margin: 6rem 2rem;
+    padding: 2rem 1rem;
+    border-radius: .4rem;
+    position: absolute;
+    box-shadow: 0 2em 20em 2em #030303;
+    left: 0;
+    right: 0;
 
-        @media (min-width: 900px) {
-            flex-direction: row;
-            height: auto;
-            position: static;
-            margin: 0;
-        }
+    @media (min-width: 900px) {
+        flex-direction: row;
+        // removes absolute positioning
+        position: static;
+        // remove margin and padding
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
     }
-    
-    button {
-        display: none;
+}
 
-        @media (min-width: 900px) {
-            display: block;
-            @include button;
-        }
+button {
+    display: none;
+
+    @media (min-width: 900px) {
+        display: block;
+        @include button;
+    }
+
+    &:hover {
+        box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
     }
 }

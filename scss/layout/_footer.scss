@@ -40,6 +40,13 @@ footer {
             justify-content: center;
             gap: $small-gap;
         }
+
+        li {
+            img:hover, img:focus {
+                background-color: $lime-green;
+                cursor: pointer;
+            }
+        }
     }
 
     &__links {
@@ -58,15 +65,19 @@ footer {
             display: flex;
             flex-direction: column;
             gap: $small-gap;
-
         }
 
-        li {
+        li a {
             color: $white;
             text-align: center;
 
             @media (min-width: 900px) {
                 text-align: start;
+            }
+
+            &:hover, &:focus {
+                color: $lime-green;
+                cursor: pointer;
             }
         }
 
