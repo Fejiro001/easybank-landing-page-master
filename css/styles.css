@@ -107,7 +107,7 @@ header {
 @media (min-width: 900px) {
   header {
     justify-content: space-between;
-    padding-inline: 5rem;
+    padding-inline: 10rem;
   }
 }
 header .website-logo {
