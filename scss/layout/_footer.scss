@@ -42,9 +42,14 @@ footer {
         }
 
         li {
-            img:hover, img:focus {
-                background-color: $lime-green;
-                cursor: pointer;
+            svg {
+                fill: #ffffff;
+
+                &:hover,
+                &:focus {
+                    fill: $lime-green;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -67,18 +72,23 @@ footer {
             gap: $small-gap;
         }
 
-        li a {
-            color: $white;
+        li {
             text-align: center;
 
             @media (min-width: 900px) {
                 text-align: start;
             }
 
-            &:hover, &:focus {
-                color: $lime-green;
-                cursor: pointer;
+            a {
+                color: $white;
+
+                &:hover,
+                &:focus {
+                    color: $lime-green;
+                    cursor: pointer;
+                }
             }
+
         }
 
     }

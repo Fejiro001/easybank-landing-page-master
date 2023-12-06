@@ -46,7 +46,7 @@ header {
     }
 
     li {
-        font-size: $paragraph-size;
+        font-size: 1rem;
 
         a {
             color: $grayish-blue;
@@ -88,7 +88,7 @@ header {
     }
 }
 
-button {
+.header-button {
     display: none;
 
     @media (min-width: 900px) {
